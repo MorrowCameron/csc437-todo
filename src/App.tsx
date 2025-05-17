@@ -1,5 +1,5 @@
 import TodoItem from "./components/TodoItem";
-import AddTaskForm from "./components/AddTaskForm";
+import AddTaskForm from "./components/AddTaskForm.tsx";
 import Modal from "./components/Modal";
 import { nanoid } from "nanoid";
 
