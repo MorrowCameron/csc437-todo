@@ -2,7 +2,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-const TodoItem = ({ id, name = "Eat", completed = false, onDelete }) => {
+
+interface TodoItemProps {
+  id: string;
+  name?: string;
+  completed?: boolean;
+  onDelete: () => void;
+}
+
+const TodoItem: React.FC<TodoItemProps> = ({
+  id,
+  name = "Eat",
+  completed = false,
+  onDelete
+}) => {
     const [isChecked, setIsChecked] = useState(completed);
 
     const handleCheckboxChange = () => {

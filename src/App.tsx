@@ -14,13 +14,13 @@ function App() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    function addTask(name) {
+    function addTask(name: string) {
         const newTask = {id: `todo-${nanoid()}`, name, completed: false};
         setTasks((prevTasks) => [...prevTasks, newTask]);
         setIsModalOpen(false);
     }
 
-    function deleteTask(id) {
+    function deleteTask(id: string) {
         setTasks((prevTasks) => prevTasks.filter(task => task.id !== id));
     }
 
